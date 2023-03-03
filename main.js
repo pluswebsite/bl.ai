@@ -1,3 +1,6 @@
+function edit(q){
+  document.getElementById("res").innerHTML = q;
+}
 function openai(q){
 const options = {
   method: 'POST',
@@ -19,7 +22,7 @@ const options = {
 
 fetch('https://api.edenai.run/v2/text/generation', options)
   .then(response => response.json())
-  .then(response => console.log(response.openai.generated_text))
+  .then(response => res(response.openai.generated_text))
   .catch(err => console.error(err));
 }
 
@@ -44,6 +47,6 @@ const options = {
 
 fetch('https://api.edenai.run/v2/text/generation', options)
   .then(response => response.json())
-  .then(response => console.log(response.openai.generated_text))
+  .then(response => res(response.cohere.generated_text))
   .catch(err => console.error(err));
 }
