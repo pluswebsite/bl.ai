@@ -1,4 +1,4 @@
-function ai(q, sever){
+function ai(q, server){
 const options = {
   method: 'POST',
   headers: {
