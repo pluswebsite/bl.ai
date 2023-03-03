@@ -22,7 +22,7 @@ const options = {
 
 fetch('https://api.edenai.run/v2/text/generation', options)
   .then(response => response.json())
-  .then(response => res(response.openai.generated_text))
+  .then(response => edit(response.openai.generated_text))
   .catch(err => console.error(err));
 }
 
@@ -47,6 +47,6 @@ const options = {
 
 fetch('https://api.edenai.run/v2/text/generation', options)
   .then(response => response.json())
-  .then(response => res(response.cohere.generated_text))
+  .then(response => edit(response))
   .catch(err => console.error(err));
 }
