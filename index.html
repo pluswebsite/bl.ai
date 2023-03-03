@@ -10,7 +10,12 @@
 	<script>
 		function dod(e){
 			if(e.keyCode == 13){
-				eval(document.getElementById("cars").value + "(" + document.getElementById("in").value + ")")
+				if(document.getElementById("cars").value == "openai"){
+					openai(document.getElementById("in").value)
+				}
+				else{
+					cohere(document.getElementById("in").value)
+				}
 			}
 		}
 		document.getElementById("in").addEventListener("keyup",dod)
