@@ -10,7 +10,7 @@
 	<script>
 		function dod(e){
 			if(e.keyCode == 13){
-				ai(document.getElementById("in").value, document.getElementById("cars").value)
+				eval(document.getElementById("cars").value + "(" + document.getElementById("in").value + ")")
 			}
 		}
 		document.getElementById("in").addEventListener("keyup",dod)
