@@ -54,13 +54,16 @@
     height: 32px;
   }
 }
+		#content{
+			display: inline;
+		}
 	</style>
 	<body>
-		<select style="display: inline" name="cars" id="cars">
+		<div id="content"><select style="display: inline" name="cars" id="cars">
   <option value="openai">1</option>
   <option value="cohere">2</option>
 </select>
-		<input id="in" placeholder="What do you want?"><br><br><div id="res"></div>
+			<input id="in" placeholder="What do you want?"></div><br><br><div id="res"></div>
 	</body>
 	<script src="main.js"></script>
 	<script>
