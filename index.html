@@ -1,0 +1,18 @@
+<html>
+	<body>
+		<select style="display: inline" name="cars" id="cars">
+  <option value="openai">1</option>
+  <option value="cohere">2</option>
+</select>
+<input id="in" placeholder="What do you want?"
+	</body>
+	<script src="main.js"></script>
+	<script>
+		function dod(e){
+			if(e.keyCode == 13){
+				ai(document.getElementById("in").value, document.getElementById("cars").value)
+			}
+		}
+		document.getElementById("in").addEventListener("keyup",dod)
+	</script>
+</html>
