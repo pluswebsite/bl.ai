@@ -48,6 +48,6 @@ const options = {
 
 fetch('https://api.edenai.run/v2/text/generation', options)
   .then(response => response.json())
-  .then(response => edit(response))
+  .then(response => edit(response.cohere.generated_text))
   .catch(err => console.error(err));
 }
