@@ -1,4 +1,5 @@
 function edit(q){
+  document.getElementById("res").setAttribute("class","")
   document.getElementById("res").innerHTML = q;
 }
 function openai(q){
