@@ -2,6 +2,7 @@ function edit(q){
   document.getElementById("res").setAttribute("class","notmine")
   document.getElementById("res").innerHTML = q;
   document.getElementById("res").setAttribute("id","")
+  document.getElementById("screen").scrollTop += 1000;
 }
 function openai(q){
 const options = {
