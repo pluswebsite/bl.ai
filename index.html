@@ -155,23 +155,10 @@
 	</body>
 	<script src="main.js"></script>
 	<script>
-		function typeWrite(q, el){
-		var i = 0;
-var txt = q;
-var speed = 20 * q.length; /* The speed/duration of the effect in milliseconds */
-
-function typeWriter() {
-  if (i < txt.length) {
-    el.innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  }
-}
-}
 		function write(html) {
 		var newP = document.createElement("p");
 		newP.setAttribute("id","res")
-		typeWrite(html, newP)
+		newP.innerHTML = html;
   		var newDiv = document.createElement("div");
 		newDiv.appendChild(newP)
  		var currentDiv = document.getElementById("screen");
