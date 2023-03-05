@@ -187,7 +187,7 @@
 				var value = document.getElementById("in").value;
 				send("<p>" + value + "</p>")
 				document.getElementById("in").value = "";
-				write("<div></div><div></div><div>";)
+				write("<div></div><div></div><div>")
 				document.getElementById("res").setAttribute("class","lds-facebook notmine")
 				if(document.getElementById("cars").value == "openai"){
 					openai(value)
