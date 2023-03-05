@@ -162,22 +162,22 @@
 			<input id="in" placeholder="What do you want?"></div>
 	</body>
 	<script src="main.js"></script>
-	<script>function write(html, calas) {
+	<script>function write(html) {
 		var newP = document.createElement("p");
+		newP.setAttribute("id","res")
 		newP.innerHTML = html;
   		var newDiv = document.createElement("div");
   		newDiv.innerHTML = "";
 		newDiv.appendChild(newP)
  		var currentDiv = document.getElementById("screen");
   		currentDiv.appendChild(newDiv);
-		newP.classList.add(calas);
 	}
 		function dod(e){
 			if(e.keyCode == 13){
 				var value = document.getElementById("in").value;
 				document.getElementById("in").value = "";
-				document.getElementById("res").innerHTML = "<div></div><div></div><div>";
-				document.getElementById("res").setAttribute("class","lds-facebook")
+				write("<div></div><div></div><div>";)
+				document.getElementById("res").setAttribute("class","lds-facebook notmine")
 				if(document.getElementById("cars").value == "openai"){
 					openai(value)
 				}
