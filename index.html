@@ -182,6 +182,7 @@
 				document.getElementById("in").value = "";
 				write("<div></div><div></div><div>")
 				document.getElementById("res").setAttribute("class","lds-facebook notmine")
+				document.getElementById("screen").scrollTop += 1000
 				if(document.getElementById("cars").value == "openai"){
 					openai(value)
 				}
