@@ -172,9 +172,20 @@
  		var currentDiv = document.getElementById("screen");
   		currentDiv.appendChild(newDiv);
 	}
+		function send(html) {
+		var newP = document.createElement("p");
+		newP.setAttribute("class","mine")
+		newP.innerHTML = html;
+  		var newDiv = document.createElement("div");
+  		newDiv.innerHTML = "";
+		newDiv.appendChild(newP)
+ 		var currentDiv = document.getElementById("screen");
+  		currentDiv.appendChild(newDiv);
+	}
 		function dod(e){
 			if(e.keyCode == 13){
 				var value = document.getElementById("in").value;
+				send("<p>" + value + "</p>)
 				document.getElementById("in").value = "";
 				write("<div></div><div></div><div>";)
 				document.getElementById("res").setAttribute("class","lds-facebook notmine")
