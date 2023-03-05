@@ -1,6 +1,7 @@
 function edit(q){
-  document.getElementById("res").setAttribute("class","")
+  document.getElementById("res").setAttribute("class","notmine")
   document.getElementById("res").innerHTML = q;
+  document.getElementById("res").setAttribute("id","")
 }
 function openai(q){
 const options = {
